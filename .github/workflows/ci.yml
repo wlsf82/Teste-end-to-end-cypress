@@ -26,11 +26,11 @@ jobs:
       - name: Run end-to-end tests on desktop viewport 🧪
         uses: cypress-io/github-action@v2
         env:
-          CYPRESS_USER_EMAIL: ${{ secrets.CYPRESS_USER_EMAIL }}
-          CYPRESS_USER_PASSWORD: ${{ secrets.CYPRESS_USER_PASSWORD }}
-          CYPRESS_MAILOSAUR_SERVER_ID: ${{ secrets.CYPRESS_MAILOSAUR_SERVER_ID }}
-          CYPRESS_MAILOSAUR_API_KEY: ${{ secrets.CYPRESS_MAILOSAUR_API_KEY }}
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_USER_EMAIL: ${ secrets.CYPRESS_USER_EMAIL }
+          CYPRESS_USER_PASSWORD: ${ secrets.CYPRESS_USER_PASSWORD }
+          CYPRESS_MAILOSAUR_SERVER_ID: ${ secrets.CYPRESS_MAILOSAUR_SERVER_ID }
+          CYPRESS_MAILOSAUR_API_KEY: ${ secrets.CYPRESS_MAILOSAUR_API_KEY }
+          CYPRESS_RECORD_KEY: ${ secrets.CYPRESS_RECORD_KEY }
         with:
           command: npm test
   cypress-tests-tablet:
@@ -44,8 +44,8 @@ jobs:
       - name: Run end-to-end tests on tablet viewport 🧪
         uses: cypress-io/github-action@v2
         env:
-          CYPRESS_USER_EMAIL: ${{ secrets.CYPRESS_USER_EMAIL }}
-          CYPRESS_USER_PASSWORD: ${{ secrets.CYPRESS_USER_PASSWORD }}
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_USER_EMAIL: ${ secrets.CYPRESS_USER_EMAIL }
+          CYPRESS_USER_PASSWORD: ${ secrets.CYPRESS_USER_PASSWORD }
+          CYPRESS_RECORD_KEY: ${ secrets.CYPRESS_RECORD_KEY }
         with:
           command: npm run test:tablet
